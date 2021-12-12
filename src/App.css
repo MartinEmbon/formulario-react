@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+  width: 100%;  
+}
+
+.titulos {
+  margin:2rem 0;  
+  padding: 10px;
+  text-align: center;
+}
+
+h2 {  
+  color:darkgrey;
+}
+
+h3 {
+  color:darkgrey;
+}
+
+input[type="text"],
+input[type="file"]{
+  border:none;
+  background:rgb(180, 196, 212);  
+  border-radius:3px;
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 100%;
+  padding: 15px 30px;
+}
+
+
+input[type="file"]::file-selector-button {
+  display: none;
+}
+
+
+input[type='text']::placeholder{
+  color:#333 !important;
+}
+
+.w-130 {  
+  padding: 13px 20px;
+    background: rgb(180, 196, 212);
+    width: 100%;
+    border: none;
+    background: rgb(180, 196, 212);
+    color: #333;
+    font-size: 14px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
+.btn {
+  display: flex;
+  justify-content: center;  
+  width: 100%;  
+}
+
+button {    
+    display:inline-block;
+    width: 450px;
+    text-align:center;
+    font-size: 14px;
+    line-height: 14px;
+    padding: 15px 30px;
+    background-color: gray;
+    color:white;
+    text-transform: uppercase;
+    cursor: pointer;
+    border:none;
+    outline:none;
+    border-radius:10px;
+}
+.form-container {
+  width: 90%;
+  margin:auto;
+  display:grid;
+  grid-gap:1rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(6,auto);
+  grid-template-areas: "nome email"
+                      "telefone cep"
+                      "linha linha"
+                      "drop area"
+                      "anexo anexo"
+                      "btn btn";
+}
+
+.form-container .nome { 
+ grid-area: nome
+}
+.form-container .email {
+  grid-area: email;
+}
+.form-container .telefone {
+  grid-area: telefone;
+}
+.form-container .cep {
+  grid-area: cep;
+}
+/* .form-container .endereco {
+  grid-area: endereco;
+} */
+
+.form-container .drop {
+  grid-area: drop;
+}
+/* .form-container .cidade {
+  grid-area: cidade;
+} */
+.form-container .area {
+  grid-area: area;
+}
+.form-container .anexo {
+  grid-area: anexo;
+  grid-gap:1rem;
+  justify-content: space-between;
+  display: flex;
+}
+
+.form-container .linha {
+  grid-area: linha;
+  grid-gap:1rem;
+  justify-content: space-between;
+  display: flex;
+}
+.form-container .linha2 {
+  grid-area: linha;
+  grid-gap:1rem;
+  justify-content: space-between;
+  display: flex;
+}
+
+
+.form-container .linha .w-50 {
+  width: 50%;
+}
+
+.form-container .w-130 {
+  grid-area: w-130;
+  width: 30%;
+}
+
+.form-container .btn {
+  grid-area: btn;  
+}
+
+.form-container .anexo .w-70 {
+  width: 70%;
+}
+
+.w-30{
+  width: 30%;
+}
+
+
+@media screen and (max-width:767px){ 
+  .form-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "nome nome"
+                        "email email"
+                        "telefone telefone"
+                        "linha linha"                        
+                        "drop cep"
+                        "area area"
+                        "anexo anexo"
+                        "btn btn";
+  }
+
+.form-container  .anexo .arquivo {
+    display:none;
+  }
+  .form-container .anexo .zeta {    
+    justify-content: center;    
+  }
+  
+  .form-container .w-130 {
+  justify-content: center;
+    width: 10%;
+  }
+  .form-container .anexo .w-70 {
+    width: 90%;
+  }
+  .form-container .linha .w-70 {
+    width: 70%;
+  }
+  .form-container .linha .w-30 {
+    width: 30%;
+  }
+ 
+  button {
+    width: 200px;
+  }
+  
+}
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

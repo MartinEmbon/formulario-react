@@ -1,0 +1,211 @@
+<div className="anexo">                
+<div className="w-70">
+<input type="text" placeholder='Anexar Curiculum' />      
+</div>
+<div className="w-130">
+  <label className="arquivo" htmlFor="filePicker">Buscar Arquivo</label>
+  <label className="zeta" htmlFor="filePicker"><span className="fas fa-search"></span></label>
+  <input id="filePicker" style={{display:"none"}} type={"file"}/>
+</div>
+</div>
+
+
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+  width: 100%;  
+}
+
+form {
+  width:90%;
+  margin:auto;    
+}
+
+form .form-container {
+  display: flex;
+  justify-content: space-between;  
+  width: 100%;  
+}
+ 
+form .col-izq {
+  width: 50%; 
+  margin-right: 0.5rem; 
+}
+form .col-der {
+  width: 50%;    
+} 
+
+form .col-izq input {
+  width: 100%;
+  border:none;
+  background:rgb(180, 196, 212);
+  border-radius:3px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+form .col-der input {
+  width: 100%;
+  border:none;
+  background:rgb(180, 196, 212);  
+  border-radius:3px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.attachment {
+  display:flex;
+  justify-content: space-between;
+  gap:1rem;  
+  width: 100%;
+}
+
+.attachment .w-170{
+  width: 65%;
+}
+
+.attachment .w-130{
+  width: 35%;  
+      
+}
+
+form input{
+  padding: 15px 20px;
+  margin-bottom: 12px;    
+}
+
+input[type='text']::placeholder{
+  color:#333 !important;
+}
+
+.w-170 input {
+  border:none;
+  background:rgb(180, 196, 212);  
+  border-radius:3px;
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 100%;
+}
+
+.attachment .w-130 label { 
+  border:none;
+  background:rgb(180, 196, 212);  
+  border-radius:3px;
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 100%;
+  padding: 14px 20px;
+  display:block;
+  width: 100%;
+  color:red;
+  display:flex;
+  justify-content: space-between;  
+  font-size: 14px;
+}
+
+
+form button {
+  display: flex;
+  justify-content: center;
+  margin:auto;
+  width:450px;
+  margin-top: 4rem;
+  text-align:center;
+  font-size: 14px;
+  line-height: 14px;
+  padding: 15px 30px;
+  background-color: gray;
+  color:white;
+  text-transform: uppercase;
+  cursor: pointer;
+  border:none;
+  outline:none;
+}
+
+
+@media screen and (max-width:767px){
+  form {
+    margin:auto;  
+    background:green;
+  }
+  .form-container {
+    flex-direction: column; 
+    width: 100%;       
+    
+  }
+  .form-container input {
+    width: 100%;
+    
+  }
+  form .col-izq {    
+    margin:0 auto;
+    width:100%;    
+  }
+  form .col-der {    
+    margin:auto;
+    width:100%;    
+  }
+  .w-170 input {
+    width: 90%;
+  }
+  button {
+    max-width: 200px;
+  }
+  .col-izq .w-100 {
+    width: 100%;
+  }
+  .col-izq .w-50 {
+    width: 50%;    
+    
+  }
+  .col-der .w-50 {    
+    width: 50%;
+  }
+}
+/* 
+.file{
+  border:none;
+  background:rgb(180, 196, 212);  
+  border-radius:3px;
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 30%;
+} */
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
